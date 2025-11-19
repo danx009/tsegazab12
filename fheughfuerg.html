@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsegazab Abrha | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #1e1e2f;
+            --light-color: #f8f8f8;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: var(--secondary-color);
+            color: white;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 100;
+            border-radius: 0 0 15px 15px;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 180px 5% 120px;
+            text-align: center;
+            background: linear-gradient(to right, #ff6b6b, #f06595);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            padding: 80px 5%;
+            background-color: #e0e0e0;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            margin: 0 0 10px 0;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 80px 5%;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .contact a {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            nav .links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                gap: 15px;
+            }
+
+            nav .links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">Tsegazab Abrha</div>
+        <div class="links" id="navLinks">
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <h1>Welcome! I'm Tsegazab Abrha</h1>
+        <p>A Grade 12 Student Passionate About Learning, Technology, and Innovation</p>
+        <a href="#projects" class="btn">See My Projects</a>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                <h3>Interactive Quiz App</h3>
+                <p>Developed a web-based quiz application using HTML, CSS, and JavaScript to enhance learning experiences.</p>
+            </div>
+
+            <div class="project">
+                <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                <h3>Science Fair Report</h3>
+                <p>Completed a comprehensive research project on renewable energy and presented findings in a school science fair.</p>
+            </div>
+
+            <div class="project">
+                <img src="https://via.placeholder.com/400x250" alt="Project 3">
+                <h3>Personal Blog Website</h3>
+                <p>Created a responsive blog platform to share educational resources, using HTML, CSS, and simple JavaScript features.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            My name is <strong>Tsegazab Abrha</strong>, and I am a <strong>Grade 12 student</strong> with a passion for learning and growth.<br>
+            I enjoy exploring new technologies, solving challenging problems, and participating in school projects.<br>
+            Outside of academics, I am involved in <strong>community activities, sports, and creative projects</strong> that help me develop valuable skills.<br>
+            I aspire to continue learning and making a positive impact through my work and initiatives.
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at <a href="mailto:tsegazab@example.com">tsegazab@gmail.com</a></p>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
